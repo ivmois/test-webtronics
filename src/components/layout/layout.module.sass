@@ -1,0 +1,30 @@
+@import 'styles/variables.sass'
+
+.layout
+  position: relative
+  width: 100%
+  // min-height: 100vh
+  display: flex
+  flex-direction: column
+  background-image: url('/img/bg/programmer.png')
+  background-position: 0 0
+  background-size: contain
+  background-repeat: no-repeat
+
+.layout::before
+  content: ''
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  position: absolute
+  z-index: 10
+  background-image: url('/img/bg/stars.png')
+  background-size: 100%
+  background-repeat: no-repeat
+
+.container
+  max-width: 1260px
+  margin: 0 auto
+  padding-right: 20px
+  padding-left: 20px

@@ -1,0 +1,115 @@
+
+@import 'styles/variables.sass'
+
+.questionItem
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    left: -6px
+    top: 19px
+    width: 61px
+    height: 1px
+    border-top: 1px solid transparent
+    background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 100%, rgba(156, 55, 253, 0.7) 40%)
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude
+    transform: rotate(-38deg)
+  &::after
+    content: ''
+    position: absolute
+    right: -6px
+    bottom: 18px
+    width: 60px
+    height: 1px
+    border-top: 1px solid transparent
+    background: linear-gradient(152.14deg,rgba(156, 55, 253, 0.7) 5%, rgba(21, 191, 253, 0.7) 50%)
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude
+    transform: rotate(-38deg)
+
+.content
+  position: relative
+  margin-bottom: 24px
+  border-radius: 12px
+  background: rgba(255, 255, 255, 0.05)
+  clip-path: polygon(0% calc(0% + 38px), calc(0% + 49px) 0%, 100% 0% , 100% calc(100% - 38px),calc(100% - 49px) 100%, 0% 100%)
+  transition: padding-bottom 0.2s
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0px
+    top: 0px
+    bottom: 0px
+    right: 0px
+    border: 1px solid transparent
+    border-radius: 12px
+    background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%)
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+     mask-composite: exclude
+
+.isOpen
+  padding-bottom: 28px
+
+.button
+  display: block
+  width: 100%
+  padding: 28px 32px
+  position: relative
+  z-index: 100
+  background: none
+  border: none
+  text-align: start
+  color: $colorText
+  font-weight: 500
+  font-size: 24px
+  line-height: 120%
+  font-family: 'Clash Display'
+
+.text
+  max-height: 0px
+  padding: 0 32px
+  transition: max-height 0.3s
+  will-change: max-height
+
+.isOpen .text
+  max-height: 700px
+
+.cross
+  display: block
+  position: absolute
+  z-index: 100
+  top: 30px
+  right: 20px
+  width: 12px
+  height: 1.5px
+  background-color: white
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 12px
+    height: 1.5px
+    background-color: white
+    transform: rotate(90deg)
+    opacity: 0
+    transition: opacity 0.2s ease
+
+.isOpen .cross::after
+  content: ''
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  width: 12px
+  height: 1.5px
+  background-color: white
+  transform: rotate(90deg)
+  opacity: 1

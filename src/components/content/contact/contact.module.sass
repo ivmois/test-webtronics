@@ -1,0 +1,31 @@
+.sectionContact
+  padding-bottom: 148px
+
+.content
+  position: relative
+  width: 100%
+  min-height: 598px
+  padding: 56px
+  border-radius: 8px
+  background: rgba(255, 255, 255, 0.05)
+  &::after
+    content: ''
+    position: absolute
+    z-index: -1
+    left: -1px
+    right: -1px
+    top: -1px
+    bottom: -1px
+    border: 1px solid transparent
+    background: linear-gradient(rgba(21, 191, 253, 0.7),rgba(156, 55, 253, 0.7)) border-box
+    border-radius: 10px
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude
+
+.title
+  margin-bottom: 16px
+
+.text
+  text-align: center
+  margin-bottom: 24px

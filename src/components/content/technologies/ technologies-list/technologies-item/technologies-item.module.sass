@@ -1,0 +1,56 @@
+@import 'styles/variables.sass'
+
+.technologiesItem
+  position: relative
+  min-width: 181px
+  margin: 0 auto
+  &::after
+    content: ''
+    position: absolute
+    right: -8px
+    bottom: 22.5px
+    width: 63px
+    height: 1px
+    border-top: 1px solid transparent
+    background: linear-gradient(152.14deg,rgba(156, 55, 253, 0.7) 0%, rgba(21, 191, 253, 0.7) 0%)
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude
+    transform: rotate(-44.9deg)
+
+.technologiesItem:not(:last-child)
+  margin-right: 25px
+
+.content
+  position: relative
+  width: 100%
+  padding: 24px 10px
+  background: rgba(255, 255, 255, 0.05)
+  border-radius: 10px
+  border-bottom-right-radius: 55px 55px
+  clip-path: polygon(0% 0% , 100% 0% , 100% calc(100% - 47px),calc(100% - 47px) 100%, 0% 100%)
+
+  &::after
+    content: ''
+    position: absolute
+    z-index: -1
+    left: 0px
+    right: 0px
+    top: 0px
+    bottom: 0px
+    border: 1px solid transparent
+
+    background: linear-gradient(152.14deg, rgba(156, 55, 253, 0.7) 9.96%, rgba(21, 191, 253, 0.7) 100%) border-box
+    border-radius: 10px
+    border-bottom-right-radius: 55px 55px
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude
+
+.img
+  width: 100%
+  margin-bottom: 15px
+  object-fit: contain
+
+.name
+  text-align: center
